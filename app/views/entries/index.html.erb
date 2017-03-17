@@ -14,7 +14,7 @@
 </div>
  
 <div class="col-md-4">
-	<p>Tags: <% @entry.tags.each do |tag| %>
+	<p>Tags: <% @tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
     <% end %>
 </div>

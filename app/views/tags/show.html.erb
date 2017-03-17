@@ -1,0 +1,9 @@
+<h1>Entries Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.entries.each do |entry| %>
+    <li><%= link_to entry.title, entry_path(entry) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "All Tags", tags_path %>

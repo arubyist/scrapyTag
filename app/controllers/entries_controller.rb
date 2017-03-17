@@ -2,6 +2,7 @@ class EntriesController < ApplicationController
 
 	def index 
 		@entries = Entry.all 
+		@tags = Tag.all
 	end
 
 	def scrape
