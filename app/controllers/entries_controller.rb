@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
 
 	def index 
-		@entries = Entries.all 
+		@entries = Entry.all 
 	end
 
 	def scrape
@@ -13,7 +13,7 @@ class EntriesController < ApplicationController
       format.json { entriesArray.to_json }
     end
   end
-		
+
 
 
 end
