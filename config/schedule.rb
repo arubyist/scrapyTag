@@ -22,6 +22,6 @@
 #  runner "RedditScrapper.scrape", :environment => "development"
 #end
 
-every 2.minutes do 
-  runner "RedditScrapper.scrape", :environment => "development"
-end
+#every 2.minutes do 
+#  runner "RedditScrapper.scrape", :environment => "development"
+#end

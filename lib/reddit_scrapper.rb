@@ -12,8 +12,7 @@ module RedditScrapper
       name = entry.css('p.tagline > a.subreddit')[0]['href']
       entry = Entry.create!(title: title, link: link)
       tag = Tag.create!(name: name)
-      tag.entries << entry
-      tag.save!
+      Tagging.create(entry_id: entry.id, tag_id: tag.id)
     end
   end
 
