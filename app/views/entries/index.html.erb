@@ -1,22 +1,23 @@
-<div class="container-fluid">
-<div class="row">
-  <div class="col-md-8">
-  		<div class="card-columns">
-   			<% @entries.reverse.each do |entry| %>
-     			<div class="card">
-       			<div class="card-block">
-        			<p class="card-title"><b><%= entry.title %></b></p>
-        			<p class="card-text"><%= entry.link %></p>
-       		</div>
-     	</div>
-   <% end %>
-	</div>
-</div>
- 
-<div class="col-md-4">
-	<p>Tags: <% @tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
+<div class="column">
+  <h1>Reddit's Scrapped Results</h1>
 </div>
 
+<div class="row">
+  <div class="column column-80">
+      <% @entries.reverse.each do |entry| %>
+        <tr>
+          <td>
+            <h3><%= entry.title %></h3>
+            <p><%= entry.link %></p>
+          </td>
+        </tr>
+      <% end %>
+  </div>
+
+  <div class="column column-20">
+    <h3>Tags:</h3>
+     <% @tags.each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %>
+      <% end %>
+  </div>
 </div>
