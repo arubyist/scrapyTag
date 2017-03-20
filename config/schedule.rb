@@ -25,3 +25,7 @@
 #every 2.minutes do 
 #  runner "RedditScrapper.scrape", :environment => "development"
 #end
+
+every 1.day, :at => '11:00am' do
+	runner "RedditScrapper.scrape", :environment => "development"
+end
