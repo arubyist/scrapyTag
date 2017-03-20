@@ -18,6 +18,10 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every :friday, :at => '11pm' do
+#every :friday, :at => '11pm' do
+#  runner "RedditScrapper.scrape", :environment => "development"
+#end
+
+every 2.minutes do 
   runner "RedditScrapper.scrape", :environment => "development"
 end

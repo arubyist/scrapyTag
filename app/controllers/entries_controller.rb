@@ -5,6 +5,10 @@ class EntriesController < ApplicationController
 		@tags = Tag.all
 	end
 
+  def show
+    @entry = Entry.find(params[:id])
+  end
+
 	def scrape
 
     RedditScrapper.scrape
